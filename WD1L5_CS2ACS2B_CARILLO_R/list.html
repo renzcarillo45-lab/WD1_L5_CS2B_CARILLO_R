@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My list | GroceryKo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="list-page">
+
+    <div class="awning"></div>
+
+    <!-- Top bar: logo / log out -->
+    <header class="topbar">
+        <strong class="logo">GroceryKo</strong>
+        <span class="hello">Signed in as <strong id="userTag"></strong></span>
+        <button type="button" id="logoutBtn" class="btn btn-ghost">Log out</button>
+    </header>
+
+    <main class="board">
+
+        <!-- Hero: greeting / progress bar -->
+        <section class="hero">
+            <h1>Hi, <span id="welcomeName"></span></h1>
+            <p id="summary"></p>
+            <div class="progress" role="progressbar" aria-label="Shopping progress">
+                <div id="progressBar"></div>
+            </div>
+        </section>
+
+        <!-- Add-item form -->
+        <form id="itemForm" class="add-row" novalidate>
+            <div class="field">
+                <label for="item_name">Item name</label>
+                <input type="text" id="item_name" placeholder="e.g. Tomatoes" required>
+            </div>
+            <div class="field">
+                <label for="item_qty">Qty</label>
+                <input type="number" id="item_qty" min="1" value="1" required>
+            </div>
+            <div class="field">
+                <label for="item_cat">Category</label>
+                <select id="item_cat">
+                    <option>Produce</option>
+                    <option>Meat &amp; Fish</option>
+                    <option>Dairy &amp; Eggs</option>
+                    <option>Pantry</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Add item</button>
+        </form>
+
+        <!-- Filter tabs -->
+        <div class="tabs" id="filterTabs">
+            <button type="button" class="tab active" data-filter="all">All</button>
+            <button type="button" class="tab" data-filter="todo">To buy</button>
+            <button type="button" class="tab" data-filter="bought">Bought</button>
+        </div>
+
+        <!-- The list -->
+        <section class="paper">
+            <div class="paper-head">
+                <h2>Shopping list</h2>
+                <span id="countLabel" class="summary-count"></span>
+            </div>
+
+            <p id="emptyNote" class="empty"></p>
+            <ul id="groceryList"></ul>
+
+            <button type="button" id="clearBtn" class="btn btn-danger">Clear list</button>
+        </section>
+    </main>
+
+    <script src="js/list.js"></script>
+</body>
+</html>

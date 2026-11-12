@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in | GroceryKo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+    <div class="awning"></div>
+
+    <aside class="brand-panel">
+        <h1>GroceryKo</h1>
+        <p>Your list is waiting. Pick up where you left off.</p>
+        <ul class="perks">
+            <li>Build your list in seconds</li>
+            <li>Tick items off as you shop</li>
+            <li>Saved on your device</li>
+        </ul>
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    </aside>
+
+    <main class="form-panel">
+        <form id="loginForm" class="card" novalidate>
+            <h2>Log in</h2>
+
+            <div class="field">
+                <label for="login_uname">Username</label>
+                <input type="text" id="login_uname" autocomplete="username" required>
+            </div>
+
+            <div class="field">
+                <label for="login_pword">Password</label>
+                <input type="password" id="login_pword" autocomplete="current-password" required>
+            </div>
+
+            <label class="check">
+                <input type="checkbox" id="showPassword"> Show password
+            </label>
+
+            <button type="submit" class="btn">Log in</button>
+            <p id="logMessage" class="message" role="alert"></p>
+
+            <p class="switch">New here? <a href="register.html">Create an account</a></p>
+        </form>
+    </main>
+
+    <script src="js/log.js"></script>
+</body>
+</html>

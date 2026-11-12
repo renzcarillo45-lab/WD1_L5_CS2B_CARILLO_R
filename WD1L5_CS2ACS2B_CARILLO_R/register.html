@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up | GroceryKo</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+    <div class="awning"></div>
+
+    <aside class="brand-panel">
+        <h1>GroceryKo</h1>
+        <p>Write it down before you walk into the store.</p>
+        <ul class="perks">
+            <li>Build your list in seconds</li>
+            <li>Tick items off as you shop</li>
+            <li>Saved on your device</li>
+        </ul>
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    </aside>
+
+    <!-- Right side: registration form -->
+    <main class="form-panel">
+        <form id="regForm" class="card" novalidate>
+            <h2>Create your account</h2>
+
+            <div class="field">
+                <label for="full_name">Full name</label>
+                <input type="text" id="full_name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+                <label for="address">Address</label>
+                <input type="text" id="address" autocomplete="street-address" required>
+            </div>
+
+            <div class="field">
+                <label for="user_name">Username</label>
+                <input type="text" id="user_name" autocomplete="username" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="pword">Password (6+ characters)</label>
+                <input type="password" id="pword" autocomplete="new-password" required>
+            </div>
+
+            <button type="submit" class="btn">Sign up</button>
+            <p id="regMessage" class="message" role="alert"></p>
+
+            <p class="switch">Already have an account? <a href="login.html">Log in</a></p>
+        </form>
+    </main>
+
+    <!-- External JS -->
+    <script src="js/reg.js"></script>
+</body>
+</html>
